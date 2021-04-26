@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    .active{
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <ul>
+      <li v-for="(m, index) in movies" v-on:click="changeClasses(index)" :class="{active: m.isActive}">{{index}}-{{m.name}}</li>
+    </ul>
+  </div>
+</body>
+<script src="../vue.js"></script>
+<script>
+  let app = new Vue({
+    el: '#app',
+    data: {
+      movies: [
+        {
+          name: '航海王',
+          isActive: false
+        },
+        {
+          name: '海王',
+          isActive: false
+        },
+        {
+          name: '蓝宇',
+          isActive: false
+        },
+        {
+          name: '驯龙高手',
+          isActive: false
+        },
+      ]
+    },
+    methods: {
+      changeClasses: function (index) {
+        // console.log(this.movies[index].isActive)
+        this.movies[index].isActive = !this.movies[index].isActive
+      }
+    }
+  })
+</script>
+</html>
