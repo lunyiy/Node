@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>切换登录类型</title>
+</head>
+<body>
+  <div id="app">
+    <span v-if="isName">
+      <label for="username">用户账号：</label>
+      <input type="text" name="username" id="username">
+    </span>
+    <span v-else>
+      <label for="usermail">用户邮箱：</label>
+      <input type="text" name="usermail" id="usermail">
+    </span>
+    <button @click="isName = !isName">切换类型</button>
+  </div>
+  <script src="../vue.js"></script>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        isName: true
+      }
+    })
+  </script>
+</body>
+</html>
