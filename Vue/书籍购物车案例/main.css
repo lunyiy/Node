@@ -1,0 +1,13 @@
+#app{
+    width: 500px;
+}
+table{
+    width: 100%;
+}
+
+table>thead>tr>th:first-child{
+    width: 50px;
+}
+table>tbody>tr>td{
+    text-align: center;   
+}
