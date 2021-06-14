@@ -1,4 +1,4 @@
-# Node.js
+# [Node.js](https://www.bilibili.com/video/BV1Ns411N7HU)
 
 ## 1.Node.js介绍
 
@@ -196,7 +196,7 @@ res.soket.remoteAddress //发送请求的客户端的ip地址
 res.soket.remotePort //端口号
 ```
 
-端口号是0 ~ 65535，部分默认端口不要占用，例如http的端口80
+端口号是0 ~ 65536，部分默认端口不要占用，例如http的端口80
 
 ### 3.5 服务端与文件读取结合，初步
 
